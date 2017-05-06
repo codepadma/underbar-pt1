@@ -5,8 +5,16 @@ describe('identity()', () => {
     expect(_.identity(null)).toBe(null);
   });
 
+  it('returns undefined if given undefined', () => {
+    expect(_.identity(undefined)).toBe(undefined);
+  });
+
   it('returns the number if given a number', () => {
     expect(_.identity(5)).toBe(5);
+  });
+
+  it('returns negative number if given a negative number', () => {
+    expect(_.identity(-5)).toBe(-5);
   });
 
   it('returns the same array if given an array', () => {
