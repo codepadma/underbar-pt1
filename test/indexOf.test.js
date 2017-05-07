@@ -31,4 +31,9 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'foo', 1)).toBe(-1);
   });
 
+  it('returns -1 when the offset is greater than or equal to the length of the array', () => {
+    const arr = ['foo', 'bar', 'baz', 'quux'];
+    expect(_.indexOf(arr, 'quux', 4)).toBe(-1);
+  });
+
 });
