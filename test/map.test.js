@@ -6,4 +6,14 @@ describe('map()', () => {
     const mappedArr = _.map(arr, (el) => el * el);
     expect(mappedArr).toEqual([1, 4, 9, 16, 25]);
   });
+
+  it('maps every property value in an object to their cube', () => {
+    const obj = {
+      'a': 1,
+      'b': 2,
+      'c': 3
+    };
+    const mappedArr = _.map(obj, (el) => el * el * el);
+    expect(mappedArr).toEqual([1, 8, 27]);
+  });
 });
