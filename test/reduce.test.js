@@ -19,4 +19,9 @@ describe('reduce()', () => {
     expect(result).toEqual(120);
   });
 
+  it('reduces an array of numbers to the product of all numbers *with* an explicit value for the accumulator', () => {
+    const nums = [1, 2, 3, 4, 5];
+    const result = _.reduce(nums, (a, b) => a * b, -1);
+    expect(result).toEqual(-120);
+  });
 });
