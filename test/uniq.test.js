@@ -5,4 +5,14 @@ describe('uniq()', () => {
     const nums = [2, 4, 5, 5, 7, 4, 10, 2];
     expect(_.uniq(nums)).toEqual([2, 4, 5, 7, 10]);
   });
+
+  it('de-dups a list of strings', () => {
+    const strings = ['fluttershy', 'pinkypony', 'fluttershy', 'jellybear'];
+    expect(_.uniq(strings)).toEqual(['fluttershy', 'pinkypony', 'jellybear']);
+  });
+
+  it('de-dups a list of boolean values', () => {
+    const values = [true, false, true];
+    expect(_.uniq(values)).toEqual([true, false]);
+  });
 });
