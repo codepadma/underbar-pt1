@@ -23,4 +23,19 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters an array to an array only of true boolean values', () => {
+    const values = [true, false, false, 'true'];
+    expect(_.filter(values, val => val === true)).toEqual([true]);
+  });
+
+  it('filters an object to only string values', () => {
+    const person = {
+      name: 'Happy',
+      age: 25,
+      ssn: 2332445570,
+      address: 'Market Street, SFO, CA'
+    };
+    expect(_.filter(person, (value) => typeof(value) === 'string'));
+  });
 });
