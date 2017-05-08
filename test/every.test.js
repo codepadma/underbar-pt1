@@ -17,5 +17,10 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    it('returns true if all numbers in an array are multiples of 5 and we test for that', () => {
+      const nums = [5, 25, 30, 35, 45];
+      expect(_.every(nums, num => num % 5 === 0)).toBe(true);
+    });
+
   });
 });
